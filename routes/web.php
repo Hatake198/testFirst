@@ -18,9 +18,10 @@ Route::get('/', [PostController::class, 'index']);
 //     return view('welcome');
 // });
 Route::get('/posts/create', [PostController::class, 'create']);
+Route::delete('/posts/{post}', [PostController::class,'delete']);
 Route::get('/posts/{post}', [PostController::class ,'show']);
 Route::post('/posts', [PostController::class, 'store']);
-Route::delete('/posts/{post}', [PostController::class,'delete']);
+
 
 // '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
 
